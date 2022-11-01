@@ -1,12 +1,14 @@
 import * as React from "react"
 import type { HeadFC } from "gatsby"
 import Layout from "../components/Layout";
+import Hero from "../components/Hero"
 
 
-const Home = () => {
+const Home:React.FC = () => {
   return (
-    <Layout>
-      Blog Website
+    <Layout >
+      <Hero />
+    
     </Layout>
   )
 }
