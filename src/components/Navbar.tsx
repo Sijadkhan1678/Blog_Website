@@ -1,33 +1,43 @@
 import React from 'react'
 import {Link} from "gatsby"
-import {Box,Stack} from '@mui/material'
+import {Box,Stack,Badge,} from '@mui/material'
 
 
 export const Navbar = () => {
   return (
+    <Box p={2.8} px={8}  >
+           <Stack direction='row' justifyContent='space-between' 
+           alignItems='center'>
+             
+             <Stack direction='row' justifyContent='space-evenly'
+             width='75%' >
+             <Link to='/' style={style}>Home</Link>
+             <Link to='/brands' style={style}>Brands</Link>
+             <Link to='/about' style={style}>About</Link>
+             </Stack>
+             <Box width='13%' > 
+
+        
+          <Link style={{color:'black'}} to='/login'>
+          Login
+           </Link>
     
-     <Box p={4} px={8} border={2}>
-      <Stack direction='row' justifyContent='space-between' 
-         alignItems='center'>
-      <Box width='10px'>
-      {/* <img width='40px' src={} alt='logo'/> */}
-      </Box>
-      <Stack direction='row' justifyContent='space-between'
-      width='30%'>
-
-        <Link to='/' >Home</Link>
-        <Link to='/blogs' >Blogs</Link>
-        <Link to='/about' >About</Link>
-
-      </Stack>
-      <Box width='13%' > 
-
- 
-      </Box>
-     </Stack>
- </Box>
+     
+             </Box>
+            </Stack>
+            
+        </Box>
 
   )
 }
+
+const style =  { fontWieght: '800px',
+  fontSize: '1.2rem',
+  textDecoration: 'none',
+  
+
+ 
+}
+
 
 export default Navbar

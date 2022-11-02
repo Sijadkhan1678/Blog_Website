@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
   plugins: [
 
     `gatsby-plugin-material-ui`,
+    'gatsby-plugin-image'
    /* {
       resolve: `gatsby-source-contentful`,
       options: {
