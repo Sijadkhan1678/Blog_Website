@@ -12,7 +12,7 @@ const Layout:FC <ChildrenPros> = ({children}) => {
     <Box>
         <Navbar />
         
-       { children} 
+       { children } 
     </Box>
     )
 }

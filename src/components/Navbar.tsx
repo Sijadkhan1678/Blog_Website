@@ -5,15 +5,16 @@ import {Box,Stack,Badge,} from '@mui/material'
 
 export const Navbar = () => {
   return (
-    <Box p={2.8} px={8}  >
+
+       <Box p={2} px={8}  >
            <Stack direction='row' justifyContent='space-between' 
            alignItems='center'>
              
              <Stack direction='row' justifyContent='space-evenly'
              width='75%' >
              <Link to='/' style={style}>Home</Link>
-             <Link to='/brands' style={style}>Brands</Link>
-             <Link to='/about' style={style}>About</Link>
+             <Link to='/blog/' style={style}>Blog</Link>
+             <Link to='/about/' style={style}>About</Link>
              </Stack>
              <Box width='13%' > 
 
@@ -26,7 +27,7 @@ export const Navbar = () => {
              </Box>
             </Stack>
             
-        </Box>
+       </Box>
 
   )
 }

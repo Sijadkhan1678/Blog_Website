@@ -1,5 +1,7 @@
 import React from 'react'
-//import Img from "gatsby"
+import {Link} from 'gatsby'
+import { StaticImage,GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
+
 import {
   Paper,
   Grid,
@@ -9,18 +11,19 @@ import {
   Stack
 } from '@mui/material'
 
-import hero  from './hero.jpg'
 
+export const BlogItem = ({blog}:any) => {
 
-
-export const BlogItem = () => {
-
+   const {title,date,featuredImage,slug} = blog 
+  
+   const image:any = getImage(featuredImage)
+  
   return (
      
-    <Grid item xs={10.3}  md={5.7} >
+    <Grid item xs={10.3}  md={3.5} >
      <Paper elevation={6}>
-
-      <img src={hero} alt='title' width='100%' style={style} />
+      <Link to='/blog:${slug}'>    {/* <StaticImage src={image} alt='title'  style={style} /> */}
+      <GatsbyImage image={image} alt='blog' />
 
       <Box  mt={2.4} pl={1.5} >
 
@@ -28,16 +31,18 @@ export const BlogItem = () => {
                      fontWeight='500'
                      fontSize='1rem'
                                   >
-                  how to build website using html css javascspt
+                  {title}
          </Typography>
 
             <Typography component='p'
                         fontWeight="300"
-                        fontSize="0.6rem"
+                        fontSize="0.7rem"
                         textAlign='left' p={1.3}>
-                         3/4/2022
+                         {date}
               </Typography>
          </Box>
+         </Link>
+  
 </Paper>
  </Grid>
 
@@ -45,7 +50,9 @@ export const BlogItem = () => {
 }
 
 const style = {
-  borderRadius: '0.8rem'
+  borderRadius: '0.8rem',
+  height: '250px'
+ // width:'400px'
 }
 
 
