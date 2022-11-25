@@ -22,13 +22,12 @@ import type { GatsbyNode } from "gatsby"
   allContentfulBlogs.nodes.forEach((blog:any) => {
 
     const {slug}:any = blog
-    
+
       createPage({
+         
       path:`/blog/${slug}`,
       component: path.resolve(`./src/templates/BlogPost.tsx`),
-      context: {
-         slug: slug
-      }
+      context: {  slug: slug }
     })
   })
   
