@@ -22,7 +22,7 @@ export const BlogItem = ({blog}:any) => {
      
     <Grid item xs={10.3}  md={3.5} >
      <Paper elevation={6}>
-      <Link to={`/blog/${slug}`}>    {/* <StaticImage src={image} alt='title'  style={style} /> */}
+      <Link to={`/blog/${slug}`} style={style}>    {/* <StaticImage src={image} alt='title'  style={style} /> */}
       <GatsbyImage image={image} alt='blog' />
 
       <Box  mt={2.4} pl={1.5} >
@@ -49,11 +49,11 @@ export const BlogItem = ({blog}:any) => {
   )
 }
 
-const style = {
-  borderRadius: '0.8rem',
-  height: '250px'
- // width:'400px'
-}
+const style =  {
 
+  textDecoration: 'none',
+  color: 'black'
+  
+}
 
 export default BlogItem

@@ -27,7 +27,8 @@ const BlogPost = ({ data }: any) => {
   //  console.log('page',pageContext)
   return (
 
-    <Box p="2rem 1.7rem" mt={{ sm: 2, md: 6 }} >
+    <Box p="2rem 1.7rem" //mt={{ sm: 2, md: 6 }} 
+    m="0 auto" >
 
       <Box sx={{m: "auto"}}>
 
@@ -65,7 +66,11 @@ query ($slug:String){
      title
      date(formatString: "Do,MMMM YYYY")
      featuredImage {
-       gatsbyImageData
+       gatsbyImageData (
+        width: 600
+        height: 330
+        
+      )
        
      }
      body {
