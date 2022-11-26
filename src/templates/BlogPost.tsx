@@ -29,7 +29,7 @@ const BlogPost = ({ data }: any) => {
 
     <Box p="2rem 1.7rem" mt={{ sm: 2, md: 6 }} >
 
-      <Box >
+      <Box sx={{m: "auto"}}>
 
         <Typography variant='h3' mb={1} mt={4}>
 
@@ -41,7 +41,7 @@ const BlogPost = ({ data }: any) => {
           {blog.date}
         </Typography>
 
-        <GatsbyImage image={image} alt='blog-post' />
+        <GatsbyImage image={image} alt='blog-post'  />
 
       </Box>
 

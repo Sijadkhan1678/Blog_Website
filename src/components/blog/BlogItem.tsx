@@ -22,7 +22,7 @@ export const BlogItem = ({blog}:any) => {
      
     <Grid item xs={10.3}  md={3.5} >
      <Paper elevation={6}>
-      <Link to='/blog:${slug}'>    {/* <StaticImage src={image} alt='title'  style={style} /> */}
+      <Link to={`/blog/${slug}`}>    {/* <StaticImage src={image} alt='title'  style={style} /> */}
       <GatsbyImage image={image} alt='blog' />
 
       <Box  mt={2.4} pl={1.5} >

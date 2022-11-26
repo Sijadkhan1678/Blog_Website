@@ -13,8 +13,8 @@ export const Navbar = () => {
              <Stack direction='row' justifyContent='space-evenly'
              width='75%' >
              <Link to='/' style={style}>Home</Link>
-             <Link to='/blog/' style={style}>Blog</Link>
-             <Link to='/about/' style={style}>About</Link>
+             <Link to='/Blog/' style={style}>Blog</Link>
+             <Link to='/About/' style={style}>About</Link>
              </Stack>
              <Box width='13%' > 
 
